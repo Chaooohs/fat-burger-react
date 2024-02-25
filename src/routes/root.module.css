@@ -1,0 +1,92 @@
+.title {
+  color: #ffe;
+  text-align: center;
+  font-size: 50px;
+}
+
+.text {
+  text-align: center;
+}
+
+.mainImage {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logbtn {
+  position: absolute;
+  right: 2rem;
+  top: 1.9rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.logbtn:hover {
+  text-decoration: underline;
+}
+
+
+/* animation */
+
+.fire {
+  text-align: center;
+  color: rgb(255, 115, 0);
+  /* font-size: 10vw; */
+  outline: none;
+  text-shadow:
+    0 0 20px crimson,
+    0 0 20px crimson,
+    0 0 10px crimson,
+    5px -10px 10px orange,
+    -5px -10px 10px yellow;
+  animation: 2s amazing infinite alternate linear;
+}
+
+@keyframes amazing {
+  0% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 10px orange,
+      0 0 10px darkorange,
+      -5px -5px 5px yellow,
+      10px -10px 10px yellow;
+  }
+
+  25% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 20px orange,
+      -5px -5px 5px yellow,
+      5px -10px 10px yellow,
+      -5px -10px 10px yellow;
+  }
+
+  50% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 10px orange,
+      0 0 10px darkorange,
+      -5px -5px 5px yellow,
+      10px -10px 10px yellow;
+  }
+
+  75% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 20px orange,
+      -5px -5px 5px yellow,
+      5px -10px 10px yellow,
+      -5px -10px 10px yellow;
+  }
+
+  100% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 10px orange,
+      0 0 10px darkorange,
+      -5px -5px 5px yellow,
+      10px -10px 10px yellow;
+  }
+}

@@ -1,0 +1,29 @@
+.btn {
+  font: inherit;
+  display: block;
+  width: 150px;
+  padding: 8px 0;
+  margin: 20px 0 40px;
+  background-color: #ffc600;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: darkorange;
+}
+
+.btn:active {
+  transform: translateY(3px);
+}
+
+@media (max-width: 512px) {
+  .btn {
+    margin: 0;
+  }
+}

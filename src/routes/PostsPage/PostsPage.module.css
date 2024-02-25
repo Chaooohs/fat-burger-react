@@ -1,0 +1,9 @@
+.link {
+  display: block;
+  width: max-content;
+  color: #2E2E2E;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

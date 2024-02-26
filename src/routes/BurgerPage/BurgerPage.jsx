@@ -1,10 +1,13 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useGetBurgersQuery } from "../../redux";
 import Btn from "../../conponents/Btn/Btn";
 import styles from "./BurgerPage.module.css";
 
 export default function BurgerPage() {
-  const burgers = useLoaderData();
+  const { data: burgers, isLoading } = useGetBurgersQuery()
   let { id } = useParams();
+
+  if (isLoading) return <h1>Loading...</h1>;
 
   const burger = burgers.find((el) => {
     if (id === el.id) {
@@ -26,11 +29,4 @@ export default function BurgerPage() {
       <Btn>All burgers</Btn>
     </main>
   );
-}
-
-export async function Loader() {
-  const res = await fetch("https://raw.githubusercontent.com/Chaooohs/JSON-resume/master/fat-burgers.json");
-
-  const burgers = await res.json();
-  return burgers;
 }

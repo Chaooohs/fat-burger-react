@@ -13,8 +13,8 @@ import PostsPage from "./routes/PostsPage/PostsPage";
 import PostPage from "./routes/PostPage/PostPage";
 import PostEditPage from "./routes/PostEditPage/PostEditPage";
 import PostCreatePage from "./routes/PostCreatePage/PostCreatePage";
-import BurgersPage, { Loader as burgersLoader } from "./routes/BurgersPage/BurgersPage";
-import BurgerPage, { Loader as burgerLoader } from "./routes/BurgerPage/BurgerPage";
+import BurgersPage from "./routes/BurgersPage/BurgersPage";
+import BurgerPage from "./routes/BurgerPage/BurgerPage";
 import LoginPage from "./routes/Loginpage/LoginPage";
 import PrivatRoute from "./routes/PrivatRoute/PrivatRoute";
 
@@ -29,8 +29,8 @@ const router = createBrowserRouter(
         <Route path=":id/new" element={<PostCreatePage />} />
         <Route path=":id/edit" element={<PostEditPage />} />
       </Route>
-      <Route path="/burgers" element={<BurgersPage />} loader={burgersLoader} />
-      <Route path="/burgers/:id" element={<BurgerPage />} loader={burgerLoader} />
+      <Route path="/burgers" element={<BurgersPage />} />
+      <Route path="/burgers/:id" element={<BurgerPage />} />
       <Route path="login" element={<LoginPage />} />
     </Route >
   )

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./PostsPage.module.css";
-import { useGetPostsQuery } from "../../redux";
+import { useGetDataQuery } from "../../redux";
 
 export default function PostsPage() {
-  const { data: posts, isLoading } = useGetPostsQuery();
+  const { data: posts, isLoading } = useGetDataQuery('/posts');
 
   if (isLoading) return <h1>Loading...</h1>;
   if (!posts) return <h2>no data</h2>;

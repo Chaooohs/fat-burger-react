@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "../NewPost/NewPost.module.css";
 import Btn from "../Btn/Btn";
-import { useGetUsersQuery } from "../../redux";
+import { useGetDataQuery } from "../../redux";
 
 export const Login = () => {
   const navigate = useNavigate();
-  const { data: user } = useGetUsersQuery();
+  const { data: user } = useGetDataQuery('/users');
   const {
     register,
     formState: { errors },

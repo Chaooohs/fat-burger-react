@@ -4,8 +4,10 @@ export const postsApi = createApi({
   reducerPath: "postsApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://jsonplaceholder.typicode.com/" }),
   endpoints: (builder) => ({
-    getPosts: builder.query({
-      query: () => "/posts",
+    getData: builder.query({
+      query: (query = '') => ({
+        url: query,
+      })
     }),
     getSinglePost: builder.query({
       query: (id = "") => `posts/${id}`,
@@ -22,11 +24,8 @@ export const postsApi = createApi({
         url: `posts/${id}`,
         method: 'delete',
       }),
-    }), 
-    getUsers: builder.query({
-      query: () => '/users',
-    })
+    }),
   }),
 });
 
-export const { useGetPostsQuery, useGetSinglePostQuery, useAddPostMutation, useDeletePostMutation, useGetUsersQuery } = postsApi;
+export const { useGetDataQuery, useGetSinglePostQuery, useAddPostMutation, useDeletePostMutation } = postsApi;
